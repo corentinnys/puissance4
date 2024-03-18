@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body {
+        background: #5c2dd5;
+        padding-top: 30px;
+    }
+    h1 {
+        display: flex;
+        justify-content: center;
+        font-size: 2.5rem;
+    }
+    .box {
+        position: relative;
+        padding-left: 15px;
+        padding-bottom: 40px;
+        border-radius: 30px;
+        -webkit-box-shadow: -1px 18px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: -1px 18px 5px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: -1px 18px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+    @media  screen and (max-width: 600px) {
+
+        div {
+            background: white;
+            width: 80%;
+            margin: auto;
+
+        }
+
+        ol {
+            padding-left: 15px;
+            margin: 0;
+        }
+
+        li {
+            line-height: 25px;
+            text-align: left;
+        }
+
+        img {
+            position: absolute;
+            z-index: 2;
+            left: 40%;
+        }
+    }
+    @media  screen and (min-width: 600px) {
+        div {
+
+            background: white;
+            width: 60%;
+            margin: auto;
+
+        }
+        ol {
+            padding-left: 15px;
+            margin: 0;
+        }
+
+        li {
+            line-height: 25px;
+            text-align: left;
+        }
+        img {
+            position: absolute;
+            z-index: 2;
+            left: 45%;
+        }
+    }
+
+</style>
+<body>
+    <div class="box">
+        <h1>RULES</h1>
+        <h2>OBJECTIVE</h2>
+        <p>
+            Be the first player to connect 4 of the same colored discs in a row (either vertially, horizontally or diagonally)
+        </p>
+        <h2>HOW TO PLAY</h2>
+        <ol>
+            <li>Red goes first in the first game</li>
+            <li>Players must alternate turns, and only disc can be dropped in each turn</li>
+            <li>The game end when there is a 4-in-a-row or stalemate</li>
+            <li>The starter of the previous game goes second on the next game</li>
+        </ol>
+        <a href="index.html">
+            <img src="assets/images/icon-check.svg" alt="">
+        </a>
+
+    </div>
+</body>
+</html>
