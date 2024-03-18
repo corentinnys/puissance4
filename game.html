@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body
+    {
+        background: #5c2dd5;
+    }
+    .btn {
+        background: violet;
+        color: white;
+        height: 40px;
+        width: 60px;
+        padding: 3px;
+        border-radius: 20px;
+        text-decoration: none;
+        display: block;
+        text-align: center; /* Pour centrer le texte horizontalement */
+        line-height: 40px; /* Pour centrer le texte verticalement */
+    }
+    header {
+        width: 600px;
+        margin: auto;
+        padding-top: 40px;
+        display: flex;
+        justify-content: space-between; /* Pour répartir les éléments également */
+
+    }
+    .d-flex
+    {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .case-player-items
+    {
+        background: white;
+        height: 100px;
+        padding: 30px;
+        border-radius: 30px;
+        -webkit-box-shadow: 10px 10px 3px -4px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 10px 10px 3px -4px rgba(0, 0, 0, 0.75);
+        box-shadow: 10px 10px 3px -4px rgba(0, 0, 0, 0.75);
+        position: relative;
+    }
+    .case-player-items img
+    {
+        position: absolute;
+        bottom: 130px;
+        left: 40px;
+    }
+    .font-size-2
+    {
+        font-size: 2rem;
+
+    }
+    .center
+    {
+        width: 40px;
+        margin: auto;
+    }
+    .counter
+    {
+
+        width: 150px;
+        margin:auto;
+        background: url("assets/images/turn-background-yellow.svg") no-repeat;
+        background-size: contain;
+        height: 100px;
+        position: relative;
+        bottom:40px;
+    }
+    .counter span{
+        display: block;
+
+       position: relative;
+        top: 25px;
+        left: 10px;
+    }
+    .seconde
+    {
+        position: relative;
+        top: 30px;
+        left: 50px;
+        font-size: 1.5rem;
+    }
+    canvas
+    {
+        margin-top: 75px;
+    }
+</style>
+<body>
+<header>
+    <a class="btn " href="index.html">menu</a>
+    <img  src="assets/images/logo.svg">
+    <a class="btn" href="index.html">restart</a>
+</header>
+<section class="d-flex">
+    <div class="case-player-items">
+        <img src="assets/images/player-one.svg" alt="">
+        <h2>player 1</h2>
+        <div class="font-size-2 center">0</div>
+    </div>
+    <div>
+        <canvas id="myCanvas" width="700" height="700"></canvas>
+        <div class="counter">
+            <span>player 2 turn</span>
+            <div class="seconde">
+                0
+            </div>
+        </div>
+    </div>
+    <div class="case-player-items">
+        <img src="assets/images/player-two.svg" alt="">
+        <h2>player 2</h2>
+        <div class="font-size-2 center">0</div>
+    </div>
+</section>
+<script>
+    // Sélectionner le canvas
+    var canvas = document.getElementById('myCanvas');
+    var ctx = canvas.getContext('2d');
+
+    // Créer une nouvelle image
+    var image = new Image();
+
+    // Charger l'image
+    image.onload = function() {
+        // Dessiner l'image sur le canvas
+        ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+    };
+
+    // Spécifier la source de l'image
+    image.src = 'assets/images/board-layer-white-large.svg';
+</script>
+</body>
+</html>
